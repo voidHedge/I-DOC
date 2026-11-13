@@ -50,10 +50,30 @@ ADMIN_USERNAME=admin ADMIN_PASSWORD=yourpassword uvicorn main:app --reload --hos
 ```
 
 ### Mobile
+
+**For local development:**
 ```bash
 cd mobile
 npm install
 npm start
+```
+
+**To build an APK (for testing on a real device):**
+First, make sure you have the EAS CLI installed and you are logged in:
+```bash
+npm install -g eas-cli
+eas login
+```
+
+Since the backend runs locally, you need to provide your local IP address to the app. Set it as an environment variable in your EAS project:
+```bash
+eas env:set --name EXPO_PUBLIC_BACKEND_URL --value "http://YOUR_LOCAL_IP:8000" --environment preview --visibility plaintext
+```
+*(Replace `YOUR_LOCAL_IP` with your computer's IP address, e.g., `192.168.1.42`)*
+
+Then, run the build:
+```bash
+eas build --profile preview --platform android
 ```
 
 ### Generator

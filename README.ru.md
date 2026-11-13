@@ -50,10 +50,30 @@ ADMIN_USERNAME=admin ADMIN_PASSWORD=yourpassword uvicorn main:app --reload --hos
 ```
 
 ### Мобильное приложение
+
+**Для локальной разработки:**
 ```bash
 cd mobile
 npm install
 npm start
+```
+
+**Для сборки APK (для тестирования на реальном устройстве):**
+Убедитесь, что у вас установлен EAS CLI и вы авторизованы:
+```bash
+npm install -g eas-cli
+eas login
+```
+
+Так как бэкенд запускается локально, приложению нужно знать ваш локальный IP-адрес. Сохраните его в переменные окружения вашего проекта EAS:
+```bash
+eas env:set --name EXPO_PUBLIC_BACKEND_URL --value "http://ВАШ_ЛОКАЛЬНЫЙ_IP:8000" --environment preview --visibility plaintext
+```
+*(Замените `ВАШ_ЛОКАЛЬНЫЙ_IP` на IP вашего компьютера, например, `192.168.1.42`)*
+
+Затем запустите сборку:
+```bash
+eas build --profile preview --platform android
 ```
 
 ### Генератор
