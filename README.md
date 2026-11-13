@@ -3,7 +3,7 @@
 # I-DOC: Document Recognition Ecosystem
 
 <p align="center">
-  <img src="./assets/demo.gif" width="320" alt="App Demo" />
+  <img src="./demo.gif" width="320" alt="App Demo" />
 </p>
 
 > **DISCLAIMER**
