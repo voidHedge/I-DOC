@@ -2,6 +2,8 @@
 
 # I-DOC: Document Recognition Ecosystem
 
+![App Demo](./demo.gif)
+
 > **DISCLAIMER**
 > This repository contains a document recognition system. The `generator` module creates synthetic images with non-existent data for testing and demonstration purposes. Every generated image contains a prominent watermark "ОБРАЗЕЦ" (SAMPLE) and is not a valid document. The project is not intended for creating forged documents, bypassing KYC, or any illegal activities. Use it at your own risk.
 
