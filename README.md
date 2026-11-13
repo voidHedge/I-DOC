@@ -18,7 +18,7 @@
 *   **Domain-Specific MRZ Standards:** Implements the exact "modernized Clear" character mapping and 7-3-1 check digit calculation mandated by the Russian Ministry of Internal Affairs (Order No. 773, Appendix 24) for internal passports.
 *   **Extensible Architecture (Strategy Pattern):** The parsing logic is built on an abstract `MRZRuleSet` base class. This allows easy switching or adding of parsing rules for different document types (e.g., international passports) without modifying the existing codebase.
 *   **Security:** JWT-based authentication with role separation (mobile user vs. admin). The initial admin is bootstrapped via environment variables on server startup to prevent unauthorized admin registration.
-*   **Data Generation:** The Python script overlays valid MRZ text onto a template, applies watermarks, noise, and Gaussian blur to simulate realistic photo conditions.
+*   **Data Generation:** The Python script overlays valid MRZ text onto a template, adding noise and blur to simulate smartphone camera conditions (testing OCR robustness against noisy inputs).
 
 ## Tech Stack
 
