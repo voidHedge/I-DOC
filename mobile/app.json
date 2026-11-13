@@ -21,7 +21,6 @@
       "package": "com.voidhedge.IDOC"
     },
     "web": {
-      "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
